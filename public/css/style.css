@@ -179,7 +179,6 @@ main div article i {
 
 main div article i:hover{
     transform: rotate(-90deg);
-    transform: scale(1.2);
 }
 
 .descripciones{
@@ -377,6 +376,8 @@ footer{
     margin-right: 10px;
 }
 
+/* ------------------lOGIN-------------------- */
+
 .div-login{
     width: 90%;
     margin: auto;
@@ -391,9 +392,9 @@ footer{
     padding: 20px;
 }
 
-.div-login label {
+.div-login form {
     display: block;
-    width: 150px;
+    width: 100%;
 }
 
 .div-login input[type="text"],
