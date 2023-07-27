@@ -171,13 +171,15 @@ main div article i {
     color: #39b54a;
     background-color: #fff;
     border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    bottom: 15px;
+    position: relative;
+    left: 80%;
+    top: -15px;
+    transition: transform all 0.8s;
 }
 
 main div article i:hover{
     transform: rotate(-90deg);
+    transform: scale(1.2);
 }
 
 .descripciones{
@@ -189,29 +191,29 @@ main div article i:hover{
 }
 
 /* ------------------FOOTER------------------------ */
-
-footer {
-    padding: 30px;
+footer{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
     text-align: center;
-    background-color: white;
+    margin-top: 30px;
 }
-.icon-footer {
-    font-size: 2em;
-    color: blue;
+.icon{
+    font-size: 3em;
     margin-bottom: 10px;
+    color: #1259c3;
 }
-
-footer h4 {
-    font-size: 18px;
-    color: #666;
+.icon:hover{
+    color: #EAC926;
+    transition: 0.3s;
 }
-
-footer p {
-    color: #666;
-    margin-bottom: 40px;
-}
-div#copyright p {
+#p1{
+    margin-top: 20px;
     text-align: left;
+    font-weight: lighter;
+}
+.item{
+    padding: 10px;
+    line-height: normal;
 }
 
   /* ------------------MEDIA QUERIES-------------------- */
@@ -222,9 +224,6 @@ div#copyright p {
         font-size: 16px;
         margin: 5px 15px;
         padding: 5px;
-    }
-    .product {
-        box-shadow: 0px 0px 10px 0px rgb(100, 100, 100);
     }
     .nav-oculto {
         display: block;
@@ -260,16 +259,25 @@ div#copyright p {
     }
     #frase_cuotas {
         width: 50%;
+        align-items: center;
     }
-    .nav-oculto nav {
+
+    .nav-oculto{
+        display: flex;
         justify-content: space-between;
     }
+
     .nav-oculto nav ul {
-        width: auto;
         margin: 0 30px;
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
     }
-    .nav-oculto nav ul li {
-        margin-left: 20px;
+    .nav-oculto ul li {
+        margin: 0px 10px ;
     }
     .ul-principal {
         display: flex;
@@ -278,7 +286,22 @@ div#copyright p {
     .ul-usuario {display: flex;
         justify-content: flex-end;
     }
+
+    .contenedor{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .item{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
 }
+
 @media (min-width: 1024px) {
     article.product {
         width: 22%;
@@ -293,9 +316,18 @@ div#copyright p {
         padding-top: 10px;
     }
     .descripciones {
+        display: none;
         margin-top: 10px;
     }
+    .product:hover .descripciones{
+    display: block;
 }
+    .product:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        transition: 0.5s;
+    }
+}
+
 
 /* ------------------REGISTER-------------------- */
 
@@ -389,4 +421,4 @@ input[type="password"] {
 .div-login button:hover{
     transition: all 0.5s;
     background-color: #0022AA;
-}
+} 

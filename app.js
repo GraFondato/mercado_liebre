@@ -30,6 +30,6 @@ app.post('/pagina-principal', (req, res) => {
     res.sendFile(__dirname + '/views/home.html');
 })
 
-app.listen(puerto, () => {
-    console.log('Aplicación esuchando en puerto 3001');
-});
+const port = process.env.PORT || 3001;
+app.listen(port,() =>console.log(`servidor corriendo en el puerto ${port}`));
+
