@@ -26,7 +26,7 @@ app.get('/home', (req, res) => {
     res.sendFile(__dirname + '/views/home.html');
 })
 
-app.post('/pagina-principal', (req, res) => {
+app.get('/pagina-principal', (req, res) => {
     res.sendFile(__dirname + '/views/home.html');
 })
 
