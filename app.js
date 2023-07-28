@@ -26,9 +26,14 @@ app.get('/home', (req, res) => {
     res.sendFile(__dirname + '/views/home.html');
 })
 
+app.post('/pagina-principal', (req, res) => {
+    res.sendFile(__dirname + '/views/home.html');
+})
+
 app.get('/pagina-principal', (req, res) => {
     res.sendFile(__dirname + '/views/home.html');
 })
+
 
 const port = process.env.PORT || 3001;
 app.listen(port,() =>console.log(`servidor corriendo en el puerto ${port}`));
